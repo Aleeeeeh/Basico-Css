@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /* section > :nth-child(odd),ul{ odd todo filho impar aplica, even todo filho par, ótimo para aplicar efeito zebra em tabelas
+                ,ul aplicar todo filho impar de ul, se colocar espaço nth-child(odd) label, irá aplicar apenas no label ou seja no nome do elemento
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* [feira]{ Propriedade colocamos em [], feira aplica em todos que estiverem com feira senao especificar tipo
+                           [feira=casa], [feira*=sa] toda palavra que conter sa aplica, ca.sa. e empre.sa.
+                           [feira~=escritorio] para aplicar ja que nesse caso temos a palavra empresa na frente
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* p + ul{ Se o que vir depois de p for ul irá aplicar, senão usar p ~ ul, então a 1° ul que achar depois de p
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* *{   "*" seletor universal todo elemento do documento ficar amarelo com fundo coral
+            color: #ff0;
+            background-color: #f77;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag nolabel'><!--Nolabel para section em si não ficar como primeiro filho -->
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
